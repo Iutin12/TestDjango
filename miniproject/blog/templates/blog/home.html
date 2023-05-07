@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>Hello World</h1>
+
+{% for post in posts %}
+    <div>
+        <h3> {{post.title}}</h3>
+        <div>
+            {{post.content}}
+        </div>
+        <p> {{post.created_at|date:"y-m-d"}}</p>
+    </div>
+    <hr>
+{% endfor %}
+</body>
+</html>
